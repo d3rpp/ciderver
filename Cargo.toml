@@ -2,6 +2,9 @@
 name = "ciderver"
 version = "0.1.1"
 edition = "2021"
+descriiption = "the modified flavour of semver used by Cider"
+license = "MIT"
+repository = "https://github.com/d3rpp/ciderver"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
