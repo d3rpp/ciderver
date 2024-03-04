@@ -7,12 +7,17 @@ impl Serialize for CiderVersion {
 	where
 		S: Serializer {
 		let formatted = format!(
-			"{}.{}.{}.{}-{}", 
+			"{}.{}.{}.{}{}", 
 			self.edition,
 			self.major,
 			self.minor,
 			self.patch,
-			self.extra
+
+			if !self.extra.is_empty() {
+				format!("-{}", self.extra)
+			} else {
+				"".to_string()
+			}
 		);
 
 		serializer.serialize_str(&formatted)
